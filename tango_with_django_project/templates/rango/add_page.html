@@ -1,11 +1,12 @@
-<!DOCTYPE = html>
-<html>
+{% extends 'rango/base.html' %}
 
-<head>
-	<title>Add Page	</title>
-</head>
-<body>
-	<h1>Add a page</h1>
+{% load staticfiles %}
+
+{% block title %}Add a Page to {{category.name}}{% endblock %}
+
+{% block body_block %}
+
+<h1>Add a page</h1>
 	<p>
 		<form id="add_page" method='post' action='/rango/category/{{category_name_slug}}/add_page/'>
 			{% csrf_token %}
@@ -25,6 +26,10 @@
 
 	</p>
 
-</body>
 
-</html>
+
+{% endblock %}
+
+
+
+	

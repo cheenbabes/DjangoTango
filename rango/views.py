@@ -14,6 +14,10 @@ def index(request):
 
 	return render(request, 'rango/index.html', context_dict)
 
+def about(request):
+    return render(request, 'rango/about.html', {})
+
+
 def category(request, category_name_slug):
 	context_dict ={'category_name_slug': category_name_slug}
 
